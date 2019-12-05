@@ -160,6 +160,9 @@ debug.sf.high_fps.earlyGl.app.duration=10000000
 debug.sf.high_fps.hwc.min.duration=8500000
 debug.sf.enable_hwc_vds=0
 
+# Verity
+ro.apk_verity.mode=2
+
 # Wi-Fi
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m_6895
