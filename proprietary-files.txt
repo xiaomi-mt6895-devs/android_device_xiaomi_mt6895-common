@@ -241,7 +241,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
@@ -270,8 +270,8 @@ vendor/etc/init/init.gps_pwr.rc
 vendor/etc/init/init.gps_scp.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/slp_conf
--vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
--vendor/etc/vintf/manifest/gnss@2.1-service.xml
+vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
+vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
@@ -288,14 +288,14 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 # IMS
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
--system_ext/framework/mediatek-common.jar:framework/mediatek-common.jar
--system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
--system_ext/framework/mediatek-ims-base.jar:framework/mediatek-ims-base.jar
--system_ext/framework/mediatek-ims-common.jar:framework/mediatek-ims-common.jar
--system_ext/framework/mediatek-ims-extension-plugin.jar:framework/mediatek-ims-extension-plugin.jar
--system_ext/framework/mediatek-telecom-common.jar:framework/mediatek-telecom-common.jar
--system_ext/framework/mediatek-telephony-base.jar:framework/mediatek-telephony-base.jar
--system_ext/framework/mediatek-telephony-common.jar:framework/mediatek-telephony-common.jar
+system_ext/framework/mediatek-common.jar:framework/mediatek-common.jar
+system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
+system_ext/framework/mediatek-ims-base.jar:framework/mediatek-ims-base.jar
+system_ext/framework/mediatek-ims-common.jar:framework/mediatek-ims-common.jar
+system_ext/framework/mediatek-ims-extension-plugin.jar:framework/mediatek-ims-extension-plugin.jar
+system_ext/framework/mediatek-telecom-common.jar:framework/mediatek-telecom-common.jar
+system_ext/framework/mediatek-telephony-base.jar:framework/mediatek-telephony-base.jar
+system_ext/framework/mediatek-telephony-common.jar:framework/mediatek-telephony-common.jar
 system_ext/lib64/libcomutils.so
 system_ext/lib64/libimsma.so
 system_ext/lib64/libimsma_adapt.so
@@ -317,7 +317,7 @@ vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # IMS (App) - from plato-user 14 UP1A.230905.011 V816.0.9.0.ULQMIXM release-keys (patched)
--system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|b9ece2c2f442b8bdd6299baa3d23ec923c37122b
+system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|b9ece2c2f442b8bdd6299baa3d23ec923c37122b
 
 # Media (C2)
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
@@ -354,11 +354,11 @@ vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/nnapi_powerhal.json
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
--vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
--vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
--vendor/etc/vintf/manifest/manifest_apuware_utils.xml
--vendor/etc/vintf/manifest/vendor.mediatek.hardware.neuropilot.agent@1.0-service.xml
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
+vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
+vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
+vendor/etc/vintf/manifest/manifest_apuware_utils.xml
+vendor/etc/vintf/manifest/vendor.mediatek.hardware.neuropilot.agent@1.0-service.xml
 vendor/lib64/APUWareApusysServer.so
 vendor/lib64/APUWareHmpServer.so
 vendor/lib64/APUWareUtilsServer.so

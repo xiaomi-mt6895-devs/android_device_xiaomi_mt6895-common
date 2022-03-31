@@ -10,9 +10,9 @@ vendor/lib64/hw/gatekeeper.mitee.so
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee
 vendor/etc/init/android.hardware.security.keymint-service.mitee.rc
--vendor/etc/vintf/manifest/android.hardware.security.keymint-service.mitee.xml
--vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xml
--vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service.mitee.xml
+vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xml
+vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
 
 # Fido
 vendor/bin/fidoca_mitee

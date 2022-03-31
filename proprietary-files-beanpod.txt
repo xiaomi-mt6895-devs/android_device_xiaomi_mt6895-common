@@ -12,9 +12,9 @@ vendor/lib64/hw/gatekeeper.beanpod.so
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint@1.0-service.beanpod
 vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
--vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml
--vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.xml
--vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml
+vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.xml
+vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml
 
 # Fido
 vendor/bin/fidoca_isee
@@ -44,7 +44,7 @@ vendor/lib64/secure_element-impl.so
 # Soter
 vendor/bin/hw/vendor.microtrust.hardware.soter@1.0-service
 vendor/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc
--vendor/etc/vintf/manifest/manifest_wechat.xml
+vendor/etc/vintf/manifest/manifest_wechat.xml
 vendor/lib64/vendor.microtrust.hardware.soter@1.0.so
 
 # Trusted Execution Environment (TEE)
@@ -52,7 +52,7 @@ vendor/bin/hw/vendor.microtrust.hardware.thh@2.0-service
 vendor/bin/teei_daemon
 vendor/etc/init/microtrust.rc
 vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc
--vendor/etc/vintf/manifest/manifest.microtrust.xml
+vendor/etc/vintf/manifest/manifest.microtrust.xml
 vendor/lib64/libTEECommon.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
