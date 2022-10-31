@@ -234,6 +234,9 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayMT6895 \
     WifiResOverlayMT6895
 
+PRODUCT_PACKAGES += \
+    LineageApertureOverlayMT6895
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
