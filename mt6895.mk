@@ -20,6 +20,9 @@ else
 PRODUCT_SYSTEM_PARTITIONS_FILE_SYSTEM_TYPE ?= ext4
 endif
 
+# API
+BOARD_SHIPPING_API_LEVEL := 31
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
