@@ -6,10 +6,10 @@
 -->
 <carrier_config_list>
     <carrier_config>
-        <boolean name="carrier_volte_available_bool" value="false" />
+        <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="false" />
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
-        <boolean name="carrier_wfc_ims_available_bool" value="false" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="editable_wfc_mode_bool" value="true" />
         <boolean name="allow_adding_apns_bool" value="true" />
         <string-array name="read_only_apn_types_string_array" num="0" />
