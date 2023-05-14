@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
+# Overlays
+PRODUCT_PACKAGES += \
+    WifiResOverlayMT6895
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6895 \
