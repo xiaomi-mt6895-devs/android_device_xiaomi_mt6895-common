@@ -131,6 +131,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResOverlayMT6895 \
     TetheringResOverlayMT6895 \
+    SettingsOverlayMT6895 \
     WifiResOverlayMT6895
 
 # Radio
