@@ -85,6 +85,9 @@ ro.vendor.smvr.p2batch.hd=16
 ro.vendor.smvr.p2batch.fhd=8
 persist.vendor.sys.mtkaal.function=0
 
+# DRM
+ro.netflix.bsp_rev=MTK6895-35027-1
+
 # GNSS
 ro.vendor.gps.chrdev=gps_drv
 ro.vendor.mtk_log_hide_gps=1
