@@ -1,0 +1,33 @@
+From be8b848cb0bf0b74d4be6d5ca665cf9c8eab93f7 Mon Sep 17 00:00:00 2001
+From: nift4 <nift4@protonmail.com>
+Date: Fri, 18 Aug 2023 01:09:59 +0200
+Subject: [PATCH 5/5] Enable AGPS if setting is unset
+
+For GSIs, no difference on Lineage
+---
+ smali/com/mediatek/location/lppe/main/LPPeService.smali | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/smali/com/mediatek/location/lppe/main/LPPeService.smali b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+index 90a393c..35a234b 100644
+--- a/smali/com/mediatek/location/lppe/main/LPPeService.smali
++++ b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+@@ -3337,13 +3337,13 @@
+ 
+     const-string v0, "assisted_gps_enabled"
+ 
+-    const/4 v1, 0x0
++    const/4 v1, 0x1
+ 
+     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+ 
+     move-result p0
+ 
+-    const/4 v0, 0x1
++    const/4 v0, 0x0
+ 
+     if-ne p0, v0, :cond_0
+ 
+-- 
+2.56.0
+

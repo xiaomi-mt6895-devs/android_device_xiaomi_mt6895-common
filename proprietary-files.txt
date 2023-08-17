@@ -289,7 +289,7 @@ vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 
 # GNSS (LPPe) - from Pacman C5.0-261112-1938
-system_ext/priv-app/LPPeService/LPPeService.apk|24397724a95455697505ca2b7c62fd36b77b1213|33c16a434d2505d1c75a3e0bbb6a4d5d28a3712d
+system_ext/priv-app/LPPeService/LPPeService.apk|24397724a95455697505ca2b7c62fd36b77b1213|1a82c3e4001b351368483bf34a0dfdd47f0e7a31
 
 # HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk
