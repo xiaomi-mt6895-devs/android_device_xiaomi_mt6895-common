@@ -1,0 +1,53 @@
+From 1ffecee2cfd8a96b1c5ad81dbecbce82f84fe621 Mon Sep 17 00:00:00 2001
+From: nift4 <nift4@protonmail.com>
+Date: Fri, 18 Aug 2023 00:34:54 +0200
+Subject: [PATCH 4/5] Enable NLP when emergency call is active
+
+The update function is called by
+8c3cd9f68cabba64f91f962264029c66958b2e6b, so this is applied instantly
+---
+ smali/com/mediatek/location/lppe/main/LPPeService.smali | 7 +++++++
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/smali/com/mediatek/location/lppe/main/LPPeService.smali b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+index 25ee175..90a393c 100644
+--- a/smali/com/mediatek/location/lppe/main/LPPeService.smali
++++ b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+@@ -3357,10 +3357,17 @@
+     .locals 3
+ 
+     .line 1745
++    invoke-direct {p0}, Lcom/mediatek/location/lppe/main/LPPeService;->isInEmergency()Z
++
++    move-result v0
++
++    if-nez v0, :cond_1
++
+     invoke-direct {p0}, Lcom/mediatek/location/lppe/main/LPPeService;->isAssistedGpsEnabled()Z
+ 
+     move-result v0
+ 
++    :cond_1
+     .line 1751
+     new-instance v1, Ljava/lang/StringBuilder;
+
+@@ -3385,14 +3392,14 @@
+ 
+     move-result p0
+ 
+-    if-nez p0, :cond_1
++    if-nez p0, :cond_2
+ 
+     .line 1753
+     const-string p0, "[lbs] lbsNlpStatusUpdate() mLbsSender.updateNlpStatus() failed"
+ 
+     invoke-static {p0}, Lcom/mediatek/location/lppe/main/LPPeService;->loge(Ljava/lang/Object;)V
+ 
+-    :cond_1
++    :cond_2
+     return-void
+ .end method
+ 
+-- 
+2.56.0
+
