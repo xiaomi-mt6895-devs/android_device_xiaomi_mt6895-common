@@ -1,0 +1,44 @@
+From 5249bf2d42a9f03e2921176de83b6326d87ba1c2 Mon Sep 17 00:00:00 2001
+From: nift4 <nift4@protonmail.com>
+Date: Thu, 17 Aug 2023 21:36:14 +0200
+Subject: [PATCH 2/5] Provide 0 IMEI unless we are emergency-calling
+
+As per 90d6826548189ca850d91692e71fcc1be426f453 ("Remove sensitive info
+from SUPL requests"), except in case of emergency, do not include sensitive
+subscriber information in SUPL requests (A-GPS).
+---
+ smali/com/mediatek/location/lppe/main/LPPeService.smali | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/smali/com/mediatek/location/lppe/main/LPPeService.smali b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+index c10c2d2..6e9587e 100644
+--- a/smali/com/mediatek/location/lppe/main/LPPeService.smali
++++ b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+@@ -3379,9 +3379,14 @@
+ .end method
+ 
+ .method private lbsProvideCapabilitiesHandler()V
+-    .locals 5
++    .locals 6
++
++    invoke-direct {p0}, Lcom/mediatek/location/lppe/main/LPPeService;->isInEmergency()Z
++
++    move-result v5
+ 
+     .line 1656
++
+     iget-object v0, p0, Lcom/mediatek/location/lppe/main/LPPeService;->mClient:Lcom/mediatek/socket/base/UdpClient;
+ 
+     if-nez v0, :cond_0
+@@ -3403,6 +3408,8 @@
+ 
+     const-string v3, ""
+ 
++    if-eqz v5, :cond_2
++
+     if-eqz v0, :cond_2
+ 
+     .line 1662
+-- 
+2.56.0
+
