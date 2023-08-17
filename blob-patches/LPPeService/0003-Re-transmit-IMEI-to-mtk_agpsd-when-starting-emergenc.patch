@@ -1,0 +1,131 @@
+From 4eb6d5711d8fedf699b79bf7fae20ca3fa451c56 Mon Sep 17 00:00:00 2001
+From: nift4 <nift4@protonmail.com>
+Date: Fri, 18 Aug 2023 00:08:26 +0200
+Subject: [PATCH 3/5] Re-transmit IMEI to mtk_agpsd when starting emergency
+ call
+
+Otherwise, it won't actually provided when it matters
+---
+ AndroidManifest.xml                           |  1 +
+ .../lppe/main/EmergencyCallListener.smali     | 51 +++++++++++++++++++
+ .../location/lppe/main/LPPeService.smali      | 20 +++++++-
+ 3 files changed, 71 insertions(+), 1 deletion(-)
+ create mode 100644 smali/com/mediatek/location/lppe/main/EmergencyCallListener.smali
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 21f0076..1b9ea44 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -9,6 +9,7 @@
+     <uses-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
++    <uses-permission android:name="android.permission.READ_ACTIVE_EMERGENCY_SESSION"/>
+     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+     <uses-permission android:name="android.permission.LOCATION_BYPASS"/>
+     <application android:allowBackup="false" android:extractNativeLibs="true" android:label="@string/app_name" android:name="com.mediatek.location.lppe.main.LPPeServiceApplication" android:process="system" android:usesNonSdkApi="true">
+diff --git a/smali/com/mediatek/location/lppe/main/EmergencyCallListener.smali b/smali/com/mediatek/location/lppe/main/EmergencyCallListener.smali
+new file mode 100644
+index 0000000..61a1422
+--- /dev/null
++++ b/smali/com/mediatek/location/lppe/main/EmergencyCallListener.smali
+@@ -0,0 +1,51 @@
++.class Lcom/mediatek/location/lppe/main/EmergencyCallListener;
++.super Landroid/telephony/TelephonyCallback;
++
++# interfaces
++.implements Landroid/telephony/TelephonyCallback$OutgoingEmergencyCallListener;
++.implements Landroid/telephony/TelephonyCallback$CallStateListener;
++
++
++# instance fields
++.field final mService:Lcom/mediatek/location/lppe/main/LPPeService;
++
++
++# direct methods
++.method public constructor <init>(Lcom/mediatek/location/lppe/main/LPPeService;)V
++    .locals 0
++
++    invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
++
++    iput-object p1, p0, Lcom/mediatek/location/lppe/main/EmergencyCallListener;->mService:Lcom/mediatek/location/lppe/main/LPPeService;
++
++    return-void
++.end method
++
++# virtual methods
++.method public onCallStateChanged(I)V
++    .locals 2
++
++    iget-object v0, p0, Lcom/mediatek/location/lppe/main/EmergencyCallListener;->mService:Lcom/mediatek/location/lppe/main/LPPeService;
++
++    iget-object v0, v0, Lcom/mediatek/location/lppe/main/LPPeService;->mLbsReceiver:Lcom/mediatek/location/lppe/lbs/LPPeLbs$LPPeLbsReceiver;
++
++    const/4 v1, 0x0
++
++    invoke-virtual {v0, v1}, Lcom/mediatek/location/lppe/lbs/LPPeLbs$LPPeLbsReceiver;->requestCapabilities(I)V
++
++    return-void
++.end method
++
++.method public onOutgoingEmergencyCall(Landroid/telephony/emergency/EmergencyNumber;I)V
++    .locals 2
++
++    iget-object v0, p0, Lcom/mediatek/location/lppe/main/EmergencyCallListener;->mService:Lcom/mediatek/location/lppe/main/LPPeService;
++
++    iget-object v0, v0, Lcom/mediatek/location/lppe/main/LPPeService;->mLbsReceiver:Lcom/mediatek/location/lppe/lbs/LPPeLbs$LPPeLbsReceiver;
++
++    const/4 v1, 0x0
++
++    invoke-virtual {v0, v1}, Lcom/mediatek/location/lppe/lbs/LPPeLbs$LPPeLbsReceiver;->requestCapabilities(I)V
++
++    return-void
++.end method
+diff --git a/smali/com/mediatek/location/lppe/main/LPPeService.smali b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+index 6e9587e..25ee175 100644
+--- a/smali/com/mediatek/location/lppe/main/LPPeService.smali
++++ b/smali/com/mediatek/location/lppe/main/LPPeService.smali
+@@ -68,7 +68,7 @@
+ 
+ .field private mLastUpdatedBatteryPercentage:I
+ 
+-.field private mLbsReceiver:Lcom/mediatek/location/lppe/lbs/LPPeLbs$LPPeLbsReceiver;
++.field public mLbsReceiver:Lcom/mediatek/location/lppe/lbs/LPPeLbs$LPPeLbsReceiver;
+ 
+ .field private mLbsSender:Lcom/mediatek/location/lppe/lbs/LPPeLbs$LPPeLbsSender;
+ 
+@@ -138,6 +138,8 @@
+ 
+ .field private mWifiState:I
+ 
++.field private mEmListener:Lcom/mediatek/location/lppe/main/EmergencyCallListener;
++
+ 
+ # direct methods
+ .method static bridge synthetic -$$Nest$fgetmClient(Lcom/mediatek/location/lppe/main/LPPeService;)Lcom/mediatek/socket/base/UdpClient;
+@@ -2497,6 +2499,22 @@
+ 
+     invoke-direct {p0}, Lcom/mediatek/location/lppe/main/LPPeService;->registerSettingsObserver()V
+ 
++    new-instance v0, Lcom/mediatek/location/lppe/main/EmergencyCallListener;
++
++    invoke-direct {v0, p0}, Lcom/mediatek/location/lppe/main/EmergencyCallListener;-><init>(Lcom/mediatek/location/lppe/main/LPPeService;)V
++
++    iput-object v0, p0, Lcom/mediatek/location/lppe/main/LPPeService;->mEmListener:Lcom/mediatek/location/lppe/main/EmergencyCallListener;
++
++    iget-object v1, p0, Lcom/mediatek/location/lppe/main/LPPeService;->mTelephonyMgr:Landroid/telephony/TelephonyManager;
++
++    iget-object p0, p0, Lcom/mediatek/location/lppe/main/LPPeService;->mContext:Landroid/content/Context;
++
++    invoke-virtual {p0}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
++
++    move-result-object v2
++
++    invoke-virtual {v1, v2, v0}, Landroid/telephony/TelephonyManager;->registerTelephonyCallback(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyCallback;)V
++
+     .line 415
+     const-string p0, "initService() done"
+ 
+-- 
+2.56.0
+
