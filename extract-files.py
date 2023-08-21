@@ -59,6 +59,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('libmpbase.so'),
     ('vendor/bin/hw/android.hardware.gnss-service.mediatek', 'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
+    'vendor/etc/gnss/agps_profiles_conf2.xml': blob_fixup()
+        .regex_replace(r'(aosp_pos_mode_enable|aosp_profile_enable|bind_nlp_setting_to_supl)="false"', r'\1="true"'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so')
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0-v31.so')
