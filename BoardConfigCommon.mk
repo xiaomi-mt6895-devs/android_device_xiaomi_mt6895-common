@@ -53,6 +53,18 @@ BOARD_BOOTCONFIG := androidboot.selinux=permissive
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Kernel
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6895
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+TARGET_KERNEL_CONFIG := \
+	gki_defconfig \
+	vendor/xiaomi_mt6895.config \
+	vendor/$(PRODUCT_DEVICE).config
+
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6895
 BOARD_HAS_MTK_HARDWARE := true
