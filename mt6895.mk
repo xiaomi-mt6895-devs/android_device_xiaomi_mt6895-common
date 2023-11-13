@@ -24,6 +24,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# Boot Control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery \
+    android.hardware.boot@1.2-service
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
