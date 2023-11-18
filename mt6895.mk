@@ -209,5 +209,19 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.0.vendor \
     android.hardware.usb.gadget@1.1.vendor
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    wpa_supplicant \
+    hostapd \
+    android.hardware.wifi-service
+
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/mt6895-common/mt6895-common-vendor.mk)
