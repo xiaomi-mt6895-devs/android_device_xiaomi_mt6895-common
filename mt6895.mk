@@ -54,7 +54,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6895 \
     fstab.mt6895.vendor_ramdisk \
-    init.recovery.mt6895.rc
+    init.batterysecret.rc \
+    init.cgroup.rc \
+    init.connectivity.rc \
+    init.mi_thermald.rc \
+    init.modem.rc \
+    init.mt6895.rc \
+    init.mt6895.usb.rc \
+    init.mtkgki.rc \
+    init.sensor_2_0.rc \
+    init.recovery.mt6895.rc \
+    ueventd.mt6895.rc
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -96,6 +106,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+
+# Modules
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.insmod.mt6895.cfg
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
