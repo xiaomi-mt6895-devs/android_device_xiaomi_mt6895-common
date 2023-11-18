@@ -1,5 +1,9 @@
 # Unpinned blobs from plato-user 14 UP1A.230620.001 V14.0.7.0.ULQMIXM release-keys
 
+# AEE
+vendor/lib/libaedv.so
+vendor/lib64/libaedv.so
+
 # Display
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895:vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
