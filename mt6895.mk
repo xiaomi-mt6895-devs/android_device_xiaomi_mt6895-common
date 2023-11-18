@@ -90,6 +90,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.example \
     android.hardware.health-service.example_recovery
 
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0.vendor
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6895 \
