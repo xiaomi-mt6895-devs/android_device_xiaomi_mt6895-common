@@ -179,7 +179,16 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.example
+    android.hardware.power-service.example \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    libmtkperf_client_vendor \
+    libmtkperf_client
+
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor \
+    vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 # Modules
 PRODUCT_PACKAGES += \
