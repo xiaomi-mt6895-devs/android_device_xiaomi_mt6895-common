@@ -198,6 +198,10 @@ PRODUCT_PACKAGES += \
     init.insmod.sh \
     init.insmod.mt6895.cfg
 
+# Sensors
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
