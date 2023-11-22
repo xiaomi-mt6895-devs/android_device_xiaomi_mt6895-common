@@ -83,6 +83,7 @@ ro.vendor.sdr2hdr.by.layer.support=true
 ro.vendor.smvr.p2batch.vga=32
 ro.vendor.smvr.p2batch.hd=16
 ro.vendor.smvr.p2batch.fhd=8
+persist.vendor.sys.mtkaal.function=0
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
