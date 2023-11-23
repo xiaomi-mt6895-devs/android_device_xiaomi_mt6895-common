@@ -128,11 +128,11 @@ PRODUCT_PACKAGES += \
     fstab.mt6895 \
     fstab.mt6895.vendor_ramdisk \
     init.batterysecret.rc \
-    init.cgroup.rc \
     init.connectivity.rc \
     init.mi_thermald.rc \
     init.modem.rc \
     init.mt6895.rc \
+    init.mt6895.power.rc \
     init.mt6895.usb.rc \
     init.mtkgki.rc \
     init.sensor_2_0.rc \
