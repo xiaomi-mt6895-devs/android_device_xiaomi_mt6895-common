@@ -8,5 +8,6 @@ cc_library_shared {
         "libhidlbase",
         "android.hardware.sensors@1.0"
     ],
+    compile_multilib: "64",
     vendor: true
 }
