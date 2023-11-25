@@ -123,6 +123,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     WifiResOverlayMT6895
 
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio@1.6.vendor
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6895 \
