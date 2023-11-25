@@ -207,6 +207,9 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     libshim_sensors
 
+PRODUCT_PACKAGES += \
+    sensors.dynamic_sensor_hal
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
