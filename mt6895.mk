@@ -38,21 +38,29 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    audio.usb.default \
+    audio.primary.default:64 \
+    audio.bluetooth.default:64 \
+    audio.usb.default:64 \
     android.hardware.bluetooth.audio-impl:64
 
 PRODUCT_PACKAGES += \
     MtkInCallService
 
 PRODUCT_PACKAGES += \
-    libaudiofoundation.vendor \
-    libbluetooth_audio_session \
-    libalsautils \
-    libnbaio_mono \
-    libtinycompress \
-    libdynproc \
-    libhapticgenerator
+    libaudiofoundation.vendor:64 \
+    libaudiopreprocessing:64 \
+    libbluetooth_audio_session:64 \
+    libbundlewrapper:64 \
+    libalsautils:64 \
+    libdownmix:64 \
+    libdynproc:64 \
+    libeffectproxy:64 \
+    libhapticgenerator:64 \
+    libldnhncr:64 \
+    libnbaio_mono:64 \
+    libreverbwrapper:64 \
+    libtinycompress:64 \
+    libvisualizer:64
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -63,8 +71,8 @@ PRODUCT_COPY_FILES += \
 
 # Boot Control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery \
+    android.hardware.boot@1.2-mtkimpl:64 \
+    android.hardware.boot@1.2-mtkimpl.recovery:64 \
     android.hardware.boot@1.2-service
 
 PRODUCT_PACKAGES_DEBUG += \
@@ -72,7 +80,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1.vendor
+    android.hardware.bluetooth@1.1.vendor:64
 
 # ConsumerIR
 PRODUCT_PACKAGES += \
@@ -84,9 +92,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek-mali
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@4.0.vendor \
-    android.frameworks.sensorservice@1.0.vendor \
-    libdrm.vendor \
+    android.hardware.graphics.allocator@4.0.vendor:64 \
+    android.frameworks.sensorservice@1.0.vendor:64 \
+    libdrm.vendor:64 \
     libutils-v32
 
 # DRM
@@ -98,7 +106,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl.custom \
+    android.hardware.fastboot@1.1-impl.custom:64 \
     fastbootd
 
 # Health
@@ -107,13 +115,13 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.example_recovery
 
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0.vendor
+    android.hardware.health@1.0.vendor:64
 
 # HIDL
 PRODUCT_PACKAGES += \
-    libhidltransport.vendor \
-    libhwbinder.vendor \
-    android.hidl.allocator@1.0.vendor
+    libhidltransport.vendor:64 \
+    libhwbinder.vendor:64 \
+    android.hidl.allocator@1.0.vendor:64
 
 # Light
 PRODUCT_PACKAGES += \
@@ -125,8 +133,8 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio@1.6.vendor
+    android.hardware.radio.config@1.3.vendor:64 \
+    android.hardware.radio@1.6.vendor:64
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -189,14 +197,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub \
-    libmtkperf_client_vendor \
-    libmtkperf_client
+    libmtkperf_client_vendor:64 \
+    libmtkperf_client:64
 
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    vendor.mediatek.hardware.mtkpower@1.0.vendor \
-    vendor.mediatek.hardware.mtkpower@1.1.vendor \
-    vendor.mediatek.hardware.mtkpower@1.2.vendor
+    android.hardware.power@1.2.vendor:64 \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor:64 \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor:64 \
+    vendor.mediatek.hardware.mtkpower@1.2.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -209,11 +217,11 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
-    libsensorndkbridge \
+    libsensorndkbridge:64 \
     libshim_sensors
 
 PRODUCT_PACKAGES += \
-    sensors.dynamic_sensor_hal
+    sensors.dynamic_sensor_hal:64
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -225,12 +233,12 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0.vendor \
-    android.hardware.usb@1.1.vendor \
-    android.hardware.usb@1.2.vendor \
-    android.hardware.usb@1.3.vendor \
-    android.hardware.usb.gadget@1.0.vendor \
-    android.hardware.usb.gadget@1.1.vendor
+    android.hardware.usb@1.0.vendor:64 \
+    android.hardware.usb@1.1.vendor:64 \
+    android.hardware.usb@1.2.vendor:64 \
+    android.hardware.usb@1.3.vendor:64 \
+    android.hardware.usb.gadget@1.0.vendor:64 \
+    android.hardware.usb.gadget@1.1.vendor:64
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -243,9 +251,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service
 
 PRODUCT_PACKAGES += \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.0.vendor \
-    android.hardware.tetheroffload.control@1.1.vendor
+    android.hardware.tetheroffload.config@1.0.vendor:64 \
+    android.hardware.tetheroffload.control@1.0.vendor:64 \
+    android.hardware.tetheroffload.control@1.1.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
