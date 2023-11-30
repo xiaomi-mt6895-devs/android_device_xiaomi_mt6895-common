@@ -30,7 +30,7 @@ bluetooth.profile.sap.server.enabled?=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bt.platform=6895
 persist.bluetooth.a2dp_offload.cap=sbc-aac
-persist.bluetooth.a2dp_offload.disabled=false
+persist.bluetooth.a2dp_offload.disabled=true
 vendor.bluetooth.ldac.abr=true
 
 # ConsumerIR
