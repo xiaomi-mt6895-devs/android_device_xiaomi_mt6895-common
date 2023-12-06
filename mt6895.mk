@@ -101,6 +101,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4.vendor:64
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -108,6 +111,11 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom:64 \
     fastbootd
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl:64 \
+    android.hardware.gatekeeper@1.0-service
 
 # Health
 PRODUCT_PACKAGES += \
@@ -122,6 +130,24 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor:64 \
     libhwbinder.vendor:64 \
     android.hidl.allocator@1.0.vendor:64
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libkeymaster_portable.vendor:64
+
+# Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-V1-ndk_platform.vendor:64 \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor:64 \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor:64 \
+    android.hardware.security.rkp-V1-ndk.vendor:64 \
+    lib_android_keymaster_keymint_utils.vendor:64 \
+    libkeymint.vendor:64
+
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.xml
 
 # Light
 PRODUCT_PACKAGES += \
@@ -223,7 +249,8 @@ PRODUCT_PACKAGES += \
 
 # Secure Element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor:64
+    android.hardware.secure_element@1.2.vendor:64 \
+    libchrome.vendor:64
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -269,6 +296,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
+# Xiaomi
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mtdservice@1.3.vendor:64 \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor:64 \
+    vendor.xiaomi.hardware.mfidoca@1.0.vendor:64
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/mt6895-common/mt6895-common-vendor.mk)
