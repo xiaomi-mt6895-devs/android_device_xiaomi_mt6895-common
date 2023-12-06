@@ -183,6 +183,7 @@ PRODUCT_PACKAGES += \
     fstab.mt6895.vendor_ramdisk \
     init.batterysecret.rc \
     init.connectivity.rc \
+    init.fingerprint.rc \
     init.mi_thermald.rc \
     init.modem.rc \
     init.mt6895.rc \
