@@ -118,7 +118,8 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
-    libudfpshandler
+    libudfpshandler \
+    sensors.udfps:64
 endif
 
 PRODUCT_PACKAGES += \
