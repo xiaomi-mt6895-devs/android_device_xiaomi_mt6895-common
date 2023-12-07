@@ -17,7 +17,7 @@
 #include <utils/SystemClock.h>
 
 static const char *udfps_state_paths[] = {
-        "/sys/touchpanel/fp_state",
+        "/sys/devices/virtual/touch/touch_dev/fod_press_status",
         NULL,
 };
 
@@ -63,14 +63,14 @@ static int udfps_read_line(int fd, char* buf, size_t len) {
     return rc;
 }
 
-static int udfps_read_state(int fd, int& pos_x, int& pos_y) {
+static int udfps_read_state(int fd) {
     int rc, state = 0;
     char buf[64];
 
     rc = udfps_read_line(fd, buf, sizeof(buf));
     if (rc > 0) {
-        rc = sscanf(buf, "%d,%d,%d", &pos_x, &pos_y, &state);
-        if (rc != 3) {
+        rc = sscanf(buf, "%d", &state);
+        if (rc != 1) {
             ALOGE("Failed to parse fp_state: %d", rc);
             state = 0;
         }
@@ -143,15 +143,15 @@ static int udfps_poll(struct sensors_poll_device_t* dev, sensors_event_t* data, 
         return -EINVAL;
     }
 
-    int fod_x, fod_y, fod_state = 0;
+    int fod_state = 0;
 
     do {
         int rc = udfps_wait_event(ctx->fd, -1);
         if (rc < 0) {
-            ALOGE("Failed to poll fp_state: %d", -errno);
+            ALOGE("Failed to poll fod_press_status: %d", -errno);
             return -errno;
         } else if (rc > 0) {
-            fod_state = udfps_read_state(ctx->fd, fod_x, fod_y);
+            fod_state = udfps_read_state(ctx->fd);
         }
     } while (!fod_state);
 
@@ -160,8 +160,6 @@ static int udfps_poll(struct sensors_poll_device_t* dev, sensors_event_t* data, 
     data->sensor = udfps_sensor.handle;
     data->type = udfps_sensor.type;
     data->timestamp = ::android::elapsedRealtimeNano();
-    data->data[0] = fod_x;
-    data->data[1] = fod_y;
 
     return 1;
 }
