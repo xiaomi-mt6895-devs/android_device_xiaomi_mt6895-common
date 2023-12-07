@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor:64 \
     android.hidl.allocator@1.0.vendor:64
 
+# IFAA manager
+PRODUCT_PACKAGES += \
+    IFAAService
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor:64 \
