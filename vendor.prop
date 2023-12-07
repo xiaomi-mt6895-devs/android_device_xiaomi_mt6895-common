@@ -141,9 +141,6 @@ telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=1
 ro.vendor.mtk_mipc_support=1
 
-# Sensors
-ro.vendor.mtk.sensor.support=yes
-
 # SOC
 ro.soc.manufacturer=Mediatek
 
