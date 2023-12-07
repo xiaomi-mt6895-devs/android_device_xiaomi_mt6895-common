@@ -166,3 +166,6 @@ debug.sf.enable_hwc_vds=0
 # Wi-Fi
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m_6895
+
+# Zygote
+zygote.critical_window.minute=10
