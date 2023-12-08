@@ -85,6 +85,16 @@ ro.vendor.smvr.p2batch.hd=16
 ro.vendor.smvr.p2batch.fhd=8
 persist.vendor.sys.mtkaal.function=0
 
+# Media
+media.c2.dmabuf.padding=3072
+ro.vendor.hdr10plus.enable=1
+ro.vendor.jpeg_decode_sw_opt=2
+ro.vendor.mtk_mvpu_security_support=0
+ro.vendor.mtk_sec_video_path_support=1
+ro.vendor.mtk_video_hevc_enc_support=1
+ro.vendor.mtk.c2.vdec.fmt.support.level=3
+vendor.mtk.vdec.waitkeyframeforplay=9
+
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn_support=1
