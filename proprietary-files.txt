@@ -147,7 +147,7 @@ vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/init/init.bt_drv.rc
 vendor/firmware/BT_FW.cfg
-vendor/firmware/soc7_0_ram_bt_1b_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1b_t_1_hdr.bin
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
@@ -164,7 +164,7 @@ vendor/bin/conninfra_loader
 vendor/etc/init/init.connfem.rc
 vendor/etc/init/init.conninfra.rc
 vendor/firmware/conninfra.cfg
-vendor/firmware/soc7_0_ram_mcu_1b_1_hdr.bin
+vendor/firmware/soc7_0_ram_mcu_1b_t_1_hdr.bin
 
 # ConsumerIR
 vendor/lib64/hw/consumerir.common.so
@@ -446,5 +446,5 @@ vendor/etc/init/wlan_assistant.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/wifi/passpointProfile.conf
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
-vendor/firmware/soc7_0_ram_wmmcu_1b_1_hdr.bin
-vendor/firmware/WIFI_RAM_CODE_soc7_0_1b_1.bin
+vendor/firmware/soc7_0_ram_wmmcu_1b_t_1_hdr.bin
+vendor/firmware/WIFI_RAM_CODE_soc7_0_1b_t_1.bin
