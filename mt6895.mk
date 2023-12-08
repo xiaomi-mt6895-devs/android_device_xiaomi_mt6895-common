@@ -130,6 +130,14 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
 
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss.measurement_corrections@1.1.vendor:64 \
+    android.hardware.gnss.visibility_control@1.0.vendor:64 \
+    android.hardware.gnss@1.1.vendor:64 \
+    android.hardware.gnss@2.1.vendor:64 \
+    android.hardware.gnss-V1-ndk_platform.vendor:64
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.example \

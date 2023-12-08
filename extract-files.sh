@@ -63,7 +63,8 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
             ;;
-        vendor/lib*/libaalservice.so)
+        vendor/lib*/libaalservice.so|\
+        vendor/bin/mnld)
             "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.15-impl.so)

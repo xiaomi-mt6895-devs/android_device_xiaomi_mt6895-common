@@ -85,6 +85,10 @@ ro.vendor.smvr.p2batch.hd=16
 ro.vendor.smvr.p2batch.fhd=8
 persist.vendor.sys.mtkaal.function=0
 
+# GNSS
+ro.vendor.gps.chrdev=gps_drv
+ro.vendor.mtk_log_hide_gps=1
+
 # Media
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
