@@ -177,7 +177,8 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor:64 \
     libstagefright_softomx_plugin.vendor:64 \
     libsfplugin_ccodec_utils.vendor:64 \
-    libcodec2_soft_common.vendor:64
+    libcodec2_soft_common.vendor:64 \
+    libstagefright_foundation-v33
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
