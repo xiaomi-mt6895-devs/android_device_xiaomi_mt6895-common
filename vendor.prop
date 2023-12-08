@@ -86,6 +86,7 @@ ro.vendor.smvr.p2batch.fhd=8
 persist.vendor.sys.mtkaal.function=0
 
 # Media
+debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
 ro.vendor.hdr10plus.enable=1
 ro.vendor.jpeg_decode_sw_opt=2
