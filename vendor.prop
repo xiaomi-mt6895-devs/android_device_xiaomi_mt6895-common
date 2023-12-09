@@ -89,6 +89,9 @@ persist.vendor.sys.mtkaal.function=0
 ro.vendor.gps.chrdev=gps_drv
 ro.vendor.mtk_log_hide_gps=1
 
+# Graphics
+ro.opengles.version=196610
+
 # Media
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
