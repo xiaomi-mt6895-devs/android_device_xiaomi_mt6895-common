@@ -311,6 +311,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/xiaomi
 
+# TEE
+BOARD_TEE_VARIANT ?= beanpod
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0.vendor:64 \

@@ -30,6 +30,10 @@ write_headers "plato"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
+printf "\n%s\n" "ifeq (\$(BOARD_TEE_VARIANT),beanpod)" >> "${PRODUCTMK}"
+write_makefiles "${MY_DIR}/proprietary-files-beanpod.txt" true
+echo "endif" >> "${PRODUCTMK}"
+
 # Finish
 write_footers
 

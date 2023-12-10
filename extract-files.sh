@@ -63,6 +63,9 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
             ;;
+        vendor/bin/hw/android.hardware.security.keymint@1.0-service.beanpod)
+            "$PATCHELF" --add-needed android.hardware.security.rkp-V1-ndk.so "$2"
+            ;;
         vendor/lib*/libaalservice.so|\
         vendor/bin/mnld)
             "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
@@ -79,6 +82,7 @@ if [ -z "${ONLY_TARGET}" ]; then
     setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    extract "${MY_DIR}/proprietary-files-beanpod.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
 if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then

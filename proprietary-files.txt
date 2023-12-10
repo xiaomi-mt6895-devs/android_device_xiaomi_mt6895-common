@@ -243,6 +243,11 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
+# DRM
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/mnld

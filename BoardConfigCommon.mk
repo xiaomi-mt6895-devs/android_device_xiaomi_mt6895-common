@@ -160,6 +160,7 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 TARGET_BOARD_PLATFORM := mt6895
 BOARD_HAS_MTK_HARDWARE := true
 BOARD_VENDOR := xiaomi
+BOARD_TEE_VARIANT ?= beanpod
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
@@ -167,6 +168,7 @@ TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor-$(BOARD_TEE_VARIANT).prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.mt6895
