@@ -162,12 +162,27 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport.vendor:64 \
+    libhidltransport:64 \
     libhwbinder.vendor:64 \
+    libhwbinder:64 \
     android.hidl.allocator@1.0.vendor:64
 
 # IFAA manager
 PRODUCT_PACKAGES += \
     IFAAService
+
+# IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -208,6 +223,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlayMT6895 \
+    TelephonyOverlayMT6895 \
     TetheringResOverlayMT6895 \
     SettingsOverlayMT6895 \
     SystemUIOverlayMT6895 \

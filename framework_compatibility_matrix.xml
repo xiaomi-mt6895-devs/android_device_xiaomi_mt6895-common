@@ -171,6 +171,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.videotelephony</name>
+        <version>1.0</version>
+        <interface>
+            <name>IVideoTelephony</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>com.fingerprints.extension</name>
         <version>3.0</version>
         <interface>
