@@ -38,6 +38,30 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.atms</name>
+        <version>1.0</version>
+        <interface>
+            <name>IATMs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.bgservice</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IBGService</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.isphal</name>
+        <version>1.0-1</version>
+        <interface>
+            <name>IISPModule</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.mms</name>
         <version>1.0-6</version>
         <interface>
