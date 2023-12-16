@@ -36,7 +36,7 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a76
- 
+
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true
 
@@ -50,11 +50,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
-
-# Audio
-SOONG_CONFIG_NAMESPACES += android_hardware_audio
-SOONG_CONFIG_android_hardware_audio += run_64bit
-SOONG_CONFIG_android_hardware_audio_run_64bit := true
 
 # Boot Image
 BOARD_KERNEL_BASE         := 0x3fff8000
