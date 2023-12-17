@@ -1,7 +1,6 @@
 # Unpinned blobs from plato-user 14 UP1A.230620.001 V14.0.7.0.ULQMIXM release-keys
 
 # AEE
-vendor/lib/libaedv.so
 vendor/lib64/libaedv.so
 
 # Audio
@@ -397,8 +396,6 @@ vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
-vendor/bin/gsm0710muxd
-vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/mtkrild.rc
@@ -419,16 +416,6 @@ vendor/etc/virtual-spn-conf-by-efgid1.xml
 vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
-vendor/lib/libcares_naptr.so
-vendor/lib/libccci_util.so
-vendor/lib/libmtkares.so
-vendor/lib/libmtkcutils.so
-vendor/lib/libmtkhardware_legacy.so
-vendor/lib/libmtknetutils.so
-vendor/lib/libmtkproperty.so
-vendor/lib/libmtkrillog.so
-vendor/lib/libmtksysutils.so
-vendor/lib/libsysenv.so
 vendor/lib64/libcares_naptr.so
 vendor/lib64/libcarrierconfig.so
 vendor/lib64/libccci_util.so
