@@ -180,6 +180,9 @@ ro.vendor.mtk_mipc_support=1
 ro.vendor.mtk_fd_support=1
 import /vendor/etc/rsc/${ro.boot.hwc}/ro.prop
 
+# Sensors
+ro.vendor.mtk.sensor.support=yes
+
 # SOC
 ro.soc.manufacturer=Mediatek
 
