@@ -178,6 +178,7 @@ telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=1
 ro.vendor.mtk_mipc_support=1
 ro.vendor.mtk_fd_support=1
+import /vendor/etc/rsc/${ro.boot.hwc}/ro.prop
 
 # SOC
 ro.soc.manufacturer=Mediatek
