@@ -129,7 +129,7 @@ PRODUCT_PACKAGES += \
 ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
     libudfpshandler \
-    sensors.mt6895
+    sensors.xiaomi
 endif
 
 PRODUCT_PACKAGES += \
