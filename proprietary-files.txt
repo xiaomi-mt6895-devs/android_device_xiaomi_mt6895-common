@@ -462,7 +462,7 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 -system_ext/framework/mediatek-telecom-common.jar:framework/mediatek-telecom-common.jar
 -system_ext/framework/mediatek-telephony-base.jar:framework/mediatek-telephony-base.jar
 -system_ext/framework/mediatek-telephony-common.jar:framework/mediatek-telephony-common.jar
--system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|62e6a0c457812366623630dffef27b0bf5ca7fad
+-system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|5210b13f0d7e59b315e9ad64479cd7cf89f167aa
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
 system_ext/lib64/libcomutils.so
