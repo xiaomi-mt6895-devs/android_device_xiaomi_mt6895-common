@@ -279,6 +279,7 @@ vendor/etc/slp_conf
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
+vendor/lib64/libviagpsrpc.so
 vendor/lib64/mt6895/libDR.so:vendor/lib64/libDR.so
 vendor/lib64/mt6895/libmnl.so:vendor/lib64/libmnl.so
 
