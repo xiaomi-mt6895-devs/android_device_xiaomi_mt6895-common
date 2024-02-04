@@ -340,12 +340,6 @@
   "Actions": [
     {
       "PowerHint": "INTERACTION",
-      "Node": "GpuPwrLevel",
-      "Duration": 0,
-      "Value": "7"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
       "Value": "1350000"
@@ -361,12 +355,6 @@
       "Node": "UclampTAMin",
       "Duration": 0,
       "Value": "40"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GpuPwrLevel",
-      "Duration": 0,
-      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
