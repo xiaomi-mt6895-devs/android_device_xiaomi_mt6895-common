@@ -1,5 +1,6 @@
 # Display
 genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/panel_info u:object_r:vendor_displayfeature_sysfs:s0
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/brightness_clone u:object_r:vendor_displayfeature_sysfs:s0
 
 # Extcon
 genfscon sysfs /devices/platform/soc/14800000.dp_tx/extcon u:object_r:sysfs_extcon:s0
