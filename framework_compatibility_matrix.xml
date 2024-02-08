@@ -1,5 +1,5 @@
 <!--
- Copyright (C) 2023 The LineageOS Project
+ Copyright (C) 2023-2024 The LineageOS Project
 
  SPDX-License-Identifier: Apache-2.0
 -->
@@ -190,14 +190,6 @@
            <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.fx.tunnel</name>
-        <version>1.0</version>
-        <interface>
-            <name>IMiFxTunnel</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.nxp.nxpnfc_aidl</name>
         <interface>
@@ -218,30 +210,6 @@
         <version>1.0</version>
         <interface>
             <name>ISoter</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.mfidoca</name>
-        <version>1.0</version>
-        <interface>
-            <name>IFidoService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.mlipay</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IMlipayService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.mtdservice</name>
-        <version>1.0-3</version>
-        <interface>
-            <name>IMTService</name>
             <instance>default</instance>
         </interface>
     </hal>
