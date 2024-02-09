@@ -69,6 +69,9 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.security.keymint@1.0-service.beanpod)
             "${PATCHELF}" --add-needed android.hardware.security.rkp-V1-ndk.so "${2}"
             ;;
+        vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee)
+            "${PATCHELF}" --add-needed android.hardware.security.rkp-V3-ndk.so "${2}"
+            ;;
         vendor/lib*/libaalservice.so|\
         vendor/bin/mnld)
             "${PATCHELF}" --add-needed "libshim_sensors.so" "${2}"
@@ -89,6 +92,7 @@ if [ -z "${ONLY_TARGET}" ]; then
 
     extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
     extract "${MY_DIR}/proprietary-files-beanpod.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    extract "${MY_DIR}/proprietary-files-mitee.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
 if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
