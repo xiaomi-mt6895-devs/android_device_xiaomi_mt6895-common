@@ -89,6 +89,9 @@ TARGET_KERNEL_CONFIG := \
 	vendor/xiaomi_mt6895.config \
 	vendor/$(PRODUCT_DEVICE).config
 
+TARGET_KERNEL_DTB := \
+    vendor/mediatek/mt6895.dtb
+
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
 # Partitions
