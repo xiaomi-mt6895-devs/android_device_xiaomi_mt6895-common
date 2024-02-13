@@ -16,13 +16,18 @@ genfscon sysfs /devices/platform/13000000.mali/devfreq/13000000.mali/min_freq u:
 genfscon sysfs /devices/platform/13000000.mali/devfreq/13000000.mali/max_freq u:object_r:vendor_sysfs_gpu:s0
 
 # Power
+genfscon sysfs /devices/platform/11282000.i2c/i2c-12/12-0064/power_supply u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/11282000.i2c/i2c-12/12-0065/power_supply u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/soc/11d04000.i2c/i2c-7/7-0055/power_supply u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/soc/11d04000.i2c/i2c-7/7-0055/verify_digest u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/soc/11d04000.i2c/i2c-7/7-0065/power_supply u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/soc/11d04000.i2c/i2c-7/7-0066/power_supply u:object_r:sysfs_power_supply:s0
-genfscon sysfs /devices/platform/soc/11d06000.i2c/i2c-9/9-0066/power_supply u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/soc/11d06000.i2c/i2c-9/9-0064/power_supply u:object_r:sysfs_power_supply:s0
-genfscon sysfs /devices/platform/xiaomi_charge/power_supply u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/soc/11d06000.i2c/i2c-9/9-0065/power_supply u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/soc/11d06000.i2c/i2c-9/9-0066/power_supply u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/soc/11d06000.i2c/i2c-9/9-0067/power_supply u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/xiaomi_charge/fg_verify_digest u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/xiaomi_charge/power_supply u:object_r:sysfs_power_supply:s0
 
 # Wakeup
 genfscon sysfs /devices/platform/10001000.consys/wakeup u:object_r:sysfs_wakeup:s0
