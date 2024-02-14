@@ -225,6 +225,9 @@ debug.sf.enable_hwc_vds=0
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 
+# UVC
+ro.usb.uvc.enabled=true
+
 # Verity
 ro.apk_verity.mode=2
 
