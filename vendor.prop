@@ -232,6 +232,8 @@ ro.usb.uvc.enabled=true
 ro.apk_verity.mode=2
 
 # Wi-Fi
+ro.vendor.wifi.sap.concurrent.iface=ap1
+ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m_6895
 
