@@ -104,6 +104,10 @@
             "Type": "CPU"
         },
         {
+            "Name": "thermal-devfreq-0",
+            "Type": "GPU"
+        },
+        {
             "Name": "mutt-pa1",
             "Type": "MODEM"
         },
@@ -122,10 +126,6 @@
         {
             "Name": "scg-off-pa2",
             "Type": "MODEM"
-        },
-        {
-            "Name": "thermal-devfreq-0",
-            "Type": "CPU"
         }
     ]
 }
