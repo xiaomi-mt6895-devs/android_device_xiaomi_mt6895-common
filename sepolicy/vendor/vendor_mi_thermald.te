@@ -6,7 +6,7 @@ init_daemon_domain(vendor_mi_thermald)
 r_dir_file(vendor_mi_thermald, sysfs)
 r_dir_file(vendor_mi_thermald, sysfs_batteryinfo)
 r_dir_file(vendor_mi_thermald, sysfs_leds)
-r_dir_file(vendor_mi_thermald, sysfs_power_supply)
+rw_dir_file(vendor_mi_thermald, sysfs_power_supply)
 r_dir_file(vendor_mi_thermald, sysfs_therm)
 r_dir_file(vendor_mi_thermald, vendor_displayfeature_sysfs)
 
