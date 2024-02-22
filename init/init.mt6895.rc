@@ -36,44 +36,9 @@ on late-init
 # mount different fs start
 
 on charger
-    exec /system/bin/e2fsck -f -p /dev/block/by-name/cache
-    mount ext4 /dev/block/by-name/cache /cache rw wait
-    chmod 0660 /dev/spm
-    chown system system /dev/spm
-    start spm_script
-    chmod 0666 /dev/kmsg
-    chmod 0775 /mnt/vendor
-    mkdir /mnt/vendor/nvcfg
-    mount ext4 /dev/block/by-name/nvcfg /mnt/vendor/nvcfg rw wait
-    chown system system /mnt/vendor/nvcfg
-    chmod 0771 /mnt/vendor/nvcfg
-    restorecon_recursive /mnt/vendor/nvcfg
-    write /sys/devices/platform/battery_meter/FG_daemon_log_level 7
-    write /sys/bus/platform/devices/battery/FG_daemon_log_level 7
-    # Permissions for System Server and daemons.
-    chown system system /sys/power/autosleep
-    chown system system /sys/power/state
-    chown system system /sys/power/wakeup_count
-    chown radio wakelock /sys/power/wake_lock
-    chown radio wakelock /sys/power/wake_unlock
-    chmod 0660 /sys/power/state
-    chmod 0660 /sys/power/wake_lock
-    chmod 0660 /sys/power/wake_unlock
-    chmod 0660 /sys/power/wakeup_count
-    write /sys/power/pm_freeze_timeout 2000
-
-    #start fuelgauged
-    #start fuelgauged_nvram
-
-    chown system system /sys/class/leds/lcd-backlight/brightness
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/green/brightness
-    chmod 0644 /sys/class/leds/lcd-backlight/max_brightness
-    chown system system /sys/class/leds/lcd-backlight/max_brightness
-    chmod 0644 /sys/class/leds/lcd-backlight/min_brightness
-    chown system system /sys/class/leds/lcd-backlight/min_brightness
-
-    start vendor.light-default
+    # Configure default brightness and switch to drm backlight trigger.
+    write /sys/class/leds/lcd-backlight/brightness 1000
+    write /sys/class/leds/lcd-backlight/trigger "backlight-drm"
 
     # Stop bootprof
     write /proc/bootprof "0"
