@@ -63,6 +63,10 @@ function blob_fixup {
         system_ext/lib64/libsink.so)
             "${PATCHELF}" --add-needed "libshim_sink.so" "${2}"
             ;;
+        system_ext/etc/init/init.vtservice.rc|\
+        vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc)
+            sed -i "s|start|enable|g" "${2}"
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
