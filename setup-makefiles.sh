@@ -30,14 +30,6 @@ write_headers "aristotle plato xaga"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-printf "\n%s\n" "ifeq (\$(BOARD_TEE_VARIANT),beanpod)" >> "${PRODUCTMK}"
-write_makefiles "${MY_DIR}/proprietary-files-beanpod.txt" true
-echo "endif" >> "${PRODUCTMK}"
-
-printf "\n%s\n" "ifeq (\$(BOARD_TEE_VARIANT),mitee)" >> "${PRODUCTMK}"
-write_makefiles "${MY_DIR}/proprietary-files-mitee.txt" true
-echo "endif" >> "${PRODUCTMK}"
-
 # Finish
 write_footers
 
@@ -50,6 +42,14 @@ if [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
 
     # The standard device blobs
     write_makefiles "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" true
+
+    if [ "${TARGET_TEE}" == "beanpod" ]
+    then
+      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-beanpod.txt" true
+    elif [ "${TARGET_TEE}" == "mitee" ]
+    then
+      write_makefiles "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-mitee.txt" true
+    fi
 
     # Finish
     write_footers
