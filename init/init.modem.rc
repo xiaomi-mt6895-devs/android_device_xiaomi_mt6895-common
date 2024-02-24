@@ -32,7 +32,5 @@ on early-init
     setprop ro.vendor.net.upload.mark.default blocking
 
 on post-fs-data
-    write /proc/bootprof "post-fs-data: on modem start"
-
 # Encrypt phone function
     setprop vold.post_fs_data_done 1

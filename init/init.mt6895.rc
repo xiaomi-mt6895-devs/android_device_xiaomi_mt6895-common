@@ -14,12 +14,7 @@ import /vendor/etc/init/hw/init.fingerprint.rc
 import /vendor/etc/init/hw/init.modem.rc
 # *** DO NOT import the new rc file after this line ***
 
-on early-init
-    write /proc/bootprof "INIT:early-init"
-
 on init
-    write /proc/bootprof "INIT:init"
-
 # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
@@ -29,7 +24,6 @@ on init
     write /proc/sys/net/core/rmem_max 8388608
 
 on late-init
-    write /proc/bootprof "INIT:late-init"
 # enable rcu_expedited
     write /sys/kernel/rcu_expedited 1
 
@@ -40,31 +34,19 @@ on charger
     write /sys/class/leds/lcd-backlight/brightness 1000
     write /sys/class/leds/lcd-backlight/trigger "backlight-drm"
 
-    # Stop bootprof
-    write /proc/bootprof "0"
-
-on early-fs
-    write /proc/bootprof "INIT:early-fs"
-
 on fs
-    write /proc/bootprof "INIT:fs"
     wait_for_prop hwservicemanager.ready "true"
     start vendor.boot-hal-1-2
 
     # mount fstab
-    write /proc/bootprof "INIT:Mount_START"
-    write /sys/kernel/tracing/trace_marker "B|1|Mount"
     mount_all --early
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
-    write /sys/kernel/tracing/trace_marker "E"
-    write /proc/bootprof "INIT:Mount_END"
 
     #haptic Start
     mkdir /mnt/vendor/persist/haptics 0755 system system
     #haptic End
 
 on fs
-
    mount iso9660 loop@/vendor/etc/iAmCdRom.iso /mnt/cd-rom ro
 
     # mount rescue
@@ -72,19 +54,11 @@ on fs
     restorecon_recursive /mnt/rescue
 
 on late-fs
-    write /proc/bootprof "INIT:late-fs"
     wait_for_prop hwservicemanager.ready "true"
 
-    write /proc/bootprof "INIT:Mount_START --late"
-    write /sys/kernel/tracing/trace_marker "B|1|Mount late"
     mount_all --late
-    write /sys/kernel/tracing/trace_marker "E"
-    write /proc/bootprof "INIT:Mount_END --late"
-
 
 on post-fs
-    write /proc/bootprof "INIT:post-fs"
-
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
 
@@ -108,8 +82,6 @@ on post-fs
     #sensor End
 
 # change owner
-    chown system system /proc/bootprof
-    chmod 0664 /proc/bootprof
     chown root system /proc/mtprof/cputime
     chown root system /proc/mtprof/reboot_pid
 
@@ -126,9 +98,7 @@ on post-fs
     chmod 0440 /proc/ccci_lp_mem
 
 on post-fs-data
-    write /proc/bootprof "INIT:post-fs-data"
     wait_for_prop vendor.all.modules.ready 1
-    write /proc/bootprof "modprobe: Load_Module_DONE"
 
     swapon_all /vendor/etc/fstab.enableswap
 
@@ -717,16 +687,10 @@ on post-fs-data
 
 # End of adding by MTK drivers
 # -----------------------
-on zygote-start
-    write /proc/bootprof "INIT:zygote-start"
-
 on early-boot
-    write /proc/bootprof "INIT:early-boot"
     verity_update_state
 
 on boot
-    write /proc/bootprof "INIT:boot"
-
     write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
 
@@ -914,25 +878,18 @@ on boot
     chmod 0660 /dev/xiaomi-touch
 
 on property:vold.decrypt=trigger_reset_main
-    write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
     setprop sys.boot_completed 0
     setprop dev.bootcomplete 0
 
-on property:vold.decrypt=trigger_post_fs_data
-    write /proc/bootprof "INIT:vold.decrypt=trigger_post_fs_data"
-
 on property:vold.decrypt=trigger_restart_min_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_restart_min_framework"
     start msensord
     start permission_check
 
 on property:vold.decrypt=trigger_restart_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_restart_framework"
     start msensord
     start permission_check
 
 on property:vold.decrypt=trigger_shutdown_framework
-    write /proc/bootprof "INIT:vold.decrypt=trigger_shutdown_framework"
     setprop sys.boot_completed 0
     setprop dev.bootcomplete 0
 
@@ -944,10 +901,6 @@ on property:vendor.audio.cit.spkcal.copy=true
     copy /data/vendor/cit/aw_cali.bin /mnt/vendor/persist/factory/audio/aw_cali.bin
     chmod 666 /mnt/vendor/persist/factory/audio/aw_cali.bin
     chmod 666 /data/vendor/cit/aw_cali.bin
-
-on property:sys.boot_completed=1
-    # stop bootprof
-    write /proc/bootprof 0
 
 # Mount mdota
 on property:ro.boot.slot_suffix=_a
