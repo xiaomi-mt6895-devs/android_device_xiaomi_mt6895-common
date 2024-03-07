@@ -2,5 +2,6 @@ hal_client_domain(mtk_hal_sensors, hal_audio)
 
 binder_call(mtk_hal_sensors, hal_audio_default)
 
+allow mtk_hal_sensors audio_socket:sock_file rw_file_perms;
 allow mtk_hal_sensors vendor_fingerprint_sysfs:file rw_file_perms;
 allow mtk_hal_sensors sensors_device:chr_file rw_file_perms;
