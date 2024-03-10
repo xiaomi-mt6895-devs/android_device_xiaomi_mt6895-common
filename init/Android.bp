@@ -12,6 +12,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "fstab.zram",
+    src: "fstab.zram",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.batterysecret.rc",
     src: "init.batterysecret.rc",
     sub_dir: "init/hw",

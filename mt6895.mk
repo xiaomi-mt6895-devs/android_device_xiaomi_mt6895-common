@@ -280,6 +280,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.mt6895 \
     fstab.mt6895.vendor_ramdisk \
+    fstab.zram \
     init.batterysecret.rc \
     init.connectivity.rc \
     init.fingerprint.rc \
