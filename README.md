@@ -1,8 +1,8 @@
-# Common device tree Xiaomi MT6895 devices.
+# Common device tree for Xiaomi MT6895 devices
 
 ```
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2023-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
