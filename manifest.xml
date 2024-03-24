@@ -1,9 +1,9 @@
 <!--
- Copyright (C) 2023 The LineageOS Project
+    Copyright (C) 2023 The LineageOS Project
 
- SPDX-License-Identifier: Apache-2.0
+    SPDX-License-Identifier: Apache-2.0
 -->
-<manifest version="4.0" type="device" target-level="6">
+<manifest version="7.0" type="device" target-level="6">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -52,14 +52,6 @@
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <fqname>@1.2::IRadio/em1</fqname>
-        <fqname>@1.2::IRadio/em2</fqname>
-        <fqname>@1.2::IRadio/imsAospSlot1</fqname>
-        <fqname>@1.2::IRadio/imsAospSlot2</fqname>
-        <fqname>@1.2::IRadio/se1</fqname>
-        <fqname>@1.2::IRadio/se2</fqname>
-        <fqname>@1.2::IRadio/slot1</fqname>
-        <fqname>@1.2::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
         <fqname>@1.6::IRadio/em1</fqname>
@@ -79,8 +71,6 @@
     <hal format="hidl">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::ISecureElement/SIM1</fqname>
-        <fqname>@1.0::ISecureElement/SIM2</fqname>
         <fqname>@1.0::ISecureElement/eSE1</fqname>
         <fqname>@1.2::ISecureElement/SIM1</fqname>
         <fqname>@1.2::ISecureElement/SIM2</fqname>
@@ -93,8 +83,8 @@
     <hal format="hidl">
         <name>com.fingerprints.extension</name>
         <transport>hwbinder</transport>
-        <fqname>@3.0::IFingerprintSensorTest/default</fqname>
         <fqname>@3.0::IFingerprintNavigation/default</fqname>
+        <fqname>@3.0::IFingerprintSensorTest/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.bluetooth.audio</name>
@@ -160,11 +150,6 @@
         <fqname>@3.0::IMtkRadioEx/mtkSmartRatSwitch2</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.pq</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.15::IPictureQuality/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.netdagent</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::INetdagent/default</fqname>
@@ -173,6 +158,11 @@
         <name>vendor.mediatek.hardware.nvram</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::INvram/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.pq</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.15::IPictureQuality/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
