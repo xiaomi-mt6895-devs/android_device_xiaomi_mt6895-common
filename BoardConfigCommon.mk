@@ -23,8 +23,7 @@ AB_OTA_PARTITIONS += \
     vendor_boot \
     vbmeta \
     vbmeta_system \
-    vbmeta_vendor \
-    dtbo
+    vbmeta_vendor
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
