@@ -1,14 +1,10 @@
 type vendor_fingerprint_sysfs, sysfs_type, fs_type;
-type vendor_fingerprint_data_file, file_type, data_file_type;
 type vendor_hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
 
 add_hwservice(hal_fingerprint_default, vendor_hal_fingerprint_hwservice_xiaomi)
 
 get_prop(hal_fingerprint_default, vendor_fingerprint_prop)
 set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
-
-allow hal_fingerprint_default vendor_fingerprint_data_file:dir create_dir_perms;
-allow hal_fingerprint_default vendor_fingerprint_data_file:file create_file_perms;
 
 allow hal_fingerprint_default vendor_touchfeature_device:chr_file rw_file_perms;
 

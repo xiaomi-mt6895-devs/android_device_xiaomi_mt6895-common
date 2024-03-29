@@ -1,3 +1,0 @@
-r_dir_file(tee, vendor_fingerprint_data_file)
-
-allow tee vendor_fingerprint_data_file:file rw_file_perms;
