@@ -25,7 +25,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "aristotle plato xaga"
+write_headers "aristotle plato rubens xaga"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true

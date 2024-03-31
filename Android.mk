@@ -6,6 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter aristotle plato xaga,$(TARGET_DEVICE)),)
+ifneq ($(filter aristotle plato rubens xaga,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
