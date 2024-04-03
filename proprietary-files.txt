@@ -317,8 +317,8 @@ vendor/etc/init/init.vtservice_hidl.rc
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
-# IMS (App) - from plato-user 14 UP1A.230905.011 V816.0.7.0.ULQMIXM release-keys (patched)
--system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|3ffd7d666f0195defd16273a8c27fdbc7a83dc7e
+# IMS (App) - from plato-user 14 UP1A.230905.011 V816.0.8.0.ULQMIXM release-keys (patched)
+-system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|6c0c94d18633c0578295e9a239a395a7c4662c34
 
 # Media (C2)
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
