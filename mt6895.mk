@@ -289,8 +289,10 @@ PRODUCT_PACKAGES += \
     init.mt6895.usb.rc \
     init.mtkgki.rc \
     init.sensor_2_0.rc \
-    init.recovery.mt6895.rc \
     ueventd.mt6895.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.mt6895.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6895.rc
 
 # Permissions
 PRODUCT_COPY_FILES += \
