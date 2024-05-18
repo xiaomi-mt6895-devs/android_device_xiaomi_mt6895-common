@@ -142,7 +142,7 @@ BOARD_VENDOR := xiaomi
 BOARD_TEE_VARIANT ?= beanpod
 
 # Power
-TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
+TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(COMMON_PATH):libperfmgr-ext-xiaomi
 
 # Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
