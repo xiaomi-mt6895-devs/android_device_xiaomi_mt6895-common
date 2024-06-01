@@ -1,5 +1,3 @@
-# Unpinned blobs from aristotle-user 14 UP1A.230905.011 V816.0.2.0.UMFMIXM release-keys
-
 # DRM
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/liboemcrypto.so
