@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
     libaudiopreprocessing \
     libbluetooth_audio_session \
     libbundlewrapper \
+    libunwindstack.vendor \
     libalsautils \
     libdownmix \
     libdynproc \
@@ -112,6 +113,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor
 
+PRODUCT_PACKAGES += \
+    libcamera_metadata.vendor
+
 # ConsumerIR
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
@@ -126,6 +130,9 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     libdrm.vendor \
     libutils-v32
+
+PRODUCT_PACKAGES += \
+    libutilscallstack.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -167,6 +174,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss-V1-ndk_platform.vendor
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libexpat.vendor
 
 # Health
 PRODUCT_PACKAGES += \
