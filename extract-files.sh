@@ -95,7 +95,8 @@ function blob_fixup {
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
             ;;
-        vendor/lib*/libmtkcam_stdutils.so)
+        vendor/lib*/libmtkcam_stdutils.so|\
+        vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
     esac
