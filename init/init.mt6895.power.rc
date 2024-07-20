@@ -49,7 +49,6 @@ on post-fs-data
     write /sys/block/dm-5/queue/read_ahead_kb 2048
 
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
-    write /proc/sys/kernel/sched_pelt_multiplier 2
 
 on boot
     # boot perf. tune
