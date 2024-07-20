@@ -83,20 +83,20 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee)
             grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || "${PATCHELF}" --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             ;;
-        vendor/lib*/libaalservice.so|\
+        vendor/lib64/mt6895/libaalservice.so|\
         vendor/bin/mnld)
             grep -q "libshim_sensors.so" "${2}" || "${PATCHELF}" --add-needed "libshim_sensors.so" "${2}"
             ;;
-        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.15-impl.so)
+        vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             grep -q "libshim_sensors.so" "${2}" || "${PATCHELF}" --add-needed "libshim_sensors.so" "${2}"
             ;;
-        vendor/lib*/hw/audio.primary.mt6895.so)
+        vendor/lib64/hw/audio.primary.mediatek.so)
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
             ;;
-        vendor/lib*/libmtkcam_stdutils.so|\
-        vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
+        vendor/lib64/mt6895/libmtkcam_stdutils.so|\
+        vendor/lib64/hw/mt6895/android.hardware.camera.provider@2.6-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
     esac

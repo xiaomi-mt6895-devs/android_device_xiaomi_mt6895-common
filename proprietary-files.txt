@@ -4,7 +4,7 @@
 vendor/lib64/libaedv.so
 
 # Audio
-vendor/lib64/hw/audio.r_submix.mediatek.so:vendor/lib64/hw/audio.r_submix.mt6895.so
+vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6895.so
 vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
@@ -170,7 +170,7 @@ vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
 
 # Display
-vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895:vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
@@ -182,13 +182,13 @@ vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
 vendor/lib64/egl/libMEOW_qt.so
 vendor/lib64/egl/libMEOW_trace.so
-vendor/lib64/egl/mt6895/libGLES_mali.so:vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/mt6895/libGLES_mali.so;SYMLINK=vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
-vendor/lib64/hw/mt6895/android.hardware.graphics.allocator@4.0-impl-mediatek.so:vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6895/android.hardware.graphics.mapper@4.0-impl-mediatek.so:vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6895/gralloc.common.so:vendor/lib64/hw/gralloc.common.so
-vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so:vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
-vendor/lib64/hw/mt6895/vulkan.mali.so:vendor/lib64/hw/vulkan.mali.so
+vendor/lib64/hw/mt6895/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
+vendor/lib64/hw/mt6895/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib64/hw/mt6895/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so
+vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
+vendor/lib64/hw/mt6895/vulkan.mali.so;SYMLINK=vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
@@ -209,18 +209,18 @@ vendor/lib64/libladder.so
 vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libudf.so
-vendor/lib64/mt6895/arm.graphics-V1-ndk_platform.so:vendor/lib64/arm.graphics-V1-ndk_platform.so
-vendor/lib64/mt6895/libaal_cust_func.so:vendor/lib64/libaal_cust_func.so
-vendor/lib64/mt6895/libaalservice.so:vendor/lib64/libaalservice.so
-vendor/lib64/mt6895/libaiselector.so:vendor/lib64/libaiselector.so
-vendor/lib64/mt6895/libdpframework.so:vendor/lib64/libdpframework.so
-vendor/lib64/mt6895/libmtk_drvb.so:vendor/lib64/libmtk_drvb.so
-vendor/lib64/mt6895/libnir_neon_driver.so:vendor/lib64/libnir_neon_driver.so
-vendor/lib64/mt6895/libpq_cust_base.so:vendor/lib64/libpq_cust_base.so
-vendor/lib64/mt6895/libpq_prot.so:vendor/lib64/libpq_prot.so
-vendor/lib64/mt6895/libpqparamparser.so:vendor/lib64/libpqparamparser.so
-vendor/lib64/mt6895/libpqpconfig.so:vendor/lib64/libpqpconfig.so
-vendor/lib64/mt6895/libpqpconfig.so:vendor/lib64/libpqpconfig.so
+vendor/lib64/mt6895/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib64/arm.graphics-V1-ndk_platform.so
+vendor/lib64/mt6895/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
+vendor/lib64/mt6895/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
+vendor/lib64/mt6895/libaiselector.so;SYMLINK=vendor/lib64/libaiselector.so
+vendor/lib64/mt6895/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
+vendor/lib64/mt6895/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
+vendor/lib64/mt6895/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
+vendor/lib64/mt6895/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
+vendor/lib64/mt6895/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
+vendor/lib64/mt6895/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
+vendor/lib64/mt6895/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
+vendor/lib64/mt6895/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
@@ -277,8 +277,8 @@ vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/libviagpsrpc.so
-vendor/lib64/mt6895/libDR.so:vendor/lib64/libDR.so
-vendor/lib64/mt6895/libmnl.so:vendor/lib64/libmnl.so
+vendor/lib64/mt6895/libDR.so;SYMLINK=vendor/lib64/libDR.so
+vendor/lib64/mt6895/libmnl.so;SYMLINK=vendor/lib64/libmnl.so
 
 # HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk
@@ -390,11 +390,11 @@ vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
-vendor/lib64/mt6895/libapudcutils.so:vendor/lib64/libapudcutils.so
-vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so:vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
-vendor/lib64/mt6895/libneuron_adapter_mgvi.so:vendor/lib64/libneuron_adapter_mgvi.so
-vendor/lib64/mt6895/libneuron_runtime.5.so:vendor/lib64/libneuron_runtime.5.so
-vendor/lib64/mt6895/libneuron_wrapper.so:vendor/lib64/libneuron_wrapper.so
+vendor/lib64/mt6895/libapudcutils.so;SYMLINK=vendor/lib64/libapudcutils.so
+vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib64/mt6895/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
+vendor/lib64/mt6895/libneuron_runtime.5.so;SYMLINK=vendor/lib64/libneuron_runtime.5.so
+vendor/lib64/mt6895/libneuron_wrapper.so;SYMLINK=vendor/lib64/libneuron_wrapper.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
 vendor/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
