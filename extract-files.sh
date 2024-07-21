@@ -116,12 +116,11 @@ if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/propriet
 
     if [ -z "${ONLY_FIRMWARE}" ]; then
         extract "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-    fi
-
-    if [ "${TARGET_TEE}" == "beanpod" ]; then
-        extract "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-beanpod.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-    elif [ "${TARGET_TEE}" == "mitee" ]; then
-        extract "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-mitee.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+        if [ "${TARGET_TEE}" == "beanpod" ]; then
+            extract "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-beanpod.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+        elif [ "${TARGET_TEE}" == "mitee" ]; then
+            extract "${MY_DIR}/../../${VENDOR_COMMON}/${DEVICE_COMMON}/proprietary-files-mitee.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+        fi
     fi
 
     if [ -z "${SECTION}" ] && [ -f "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" ]; then
