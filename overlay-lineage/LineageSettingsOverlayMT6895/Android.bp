@@ -1,0 +1,9 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "LineageSettingsOverlayMT6895",
+    product_specific: true,
+}
