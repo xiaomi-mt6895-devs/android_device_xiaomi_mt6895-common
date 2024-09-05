@@ -13,6 +13,12 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'device/xiaomi/mt6895-common',
+    'hardware/mediatek',
+    'hardware/xiaomi',
+]
+
 blob_fixups: blob_fixups_user_type = {
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('blob-patches/ImsService.patch', '-r'),
@@ -35,6 +41,7 @@ module = ExtractUtilsModule(
     'mt6895-common',
     'xiaomi',
     blob_fixups=blob_fixups,
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
