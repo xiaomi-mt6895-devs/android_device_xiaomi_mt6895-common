@@ -28,6 +28,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
     ('system_ext/etc/init/init.vtservice.rc', 'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc'): blob_fixup()
         .regex_replace('start', 'enable'),
+    ('vendor/bin/hw/android.hardware.gnss-service.mediatek', 'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
+        .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
     ('vendor/lib64/mt6895/libaalservice.so', 'vendor/bin/mnld'): blob_fixup()
