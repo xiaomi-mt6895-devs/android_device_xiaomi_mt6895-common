@@ -300,7 +300,7 @@ system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telec
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar
 system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar
 system_ext/lib64/libcomutils.so
-system_ext/lib64/libimsma.so
+system_ext/lib64/libimsma.so;DISABLE_CHECKELF
 system_ext/lib64/libimsma_adapt.so
 system_ext/lib64/libimsma_rtp.so
 system_ext/lib64/libimsma_socketwrapper.so
@@ -363,7 +363,7 @@ vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
 vendor/etc/vintf/manifest/manifest_apuware_utils.xml
 vendor/etc/vintf/manifest/vendor.mediatek.hardware.neuropilot.agent@1.0-service.xml
 vendor/etc/nnapi_powerhal.json
-vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
 vendor/lib64/mt6895/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
 vendor/lib64/mt6895/libneuron_runtime.5.so;SYMLINK=vendor/lib64/libneuron_runtime.5.so
 vendor/lib64/mt6895/libneuron_wrapper.so;SYMLINK=vendor/lib64/libneuron_wrapper.so
