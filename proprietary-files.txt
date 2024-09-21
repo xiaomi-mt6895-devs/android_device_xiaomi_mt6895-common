@@ -385,7 +385,6 @@ vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
-vendor/lib64/mt6895/libapudcutils.so;SYMLINK=vendor/lib64/libapudcutils.so
 vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
 vendor/lib64/mt6895/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
 vendor/lib64/mt6895/libneuron_runtime.5.so;SYMLINK=vendor/lib64/libneuron_runtime.5.so
