@@ -157,6 +157,9 @@ ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
     libudfpshandler \
     sensors.xiaomi.v2
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.sensors.xiaomi.udfps=true
 endif
 
 PRODUCT_PACKAGES += \
