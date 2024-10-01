@@ -2,8 +2,8 @@
 audio.deep_buffer.media=true
 audio.offload.video=true
 audio.offload.min.duration.secs=30
-aaudio.mmap_policy=2
-aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=0
+aaudio.mmap_exclusive_policy=0
 ro.vendor.audio.gain.support=true
 ro.config.media_vol_default=10
 ro.config.vc_call_vol_steps=11
