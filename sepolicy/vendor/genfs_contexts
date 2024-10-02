@@ -14,10 +14,6 @@ genfscon sysfs /devices/platform/fingerprint/clk_enable u:object_r:vendor_finger
 genfscon sysfs /devices/platform/fingerprint/fingerdown_wait u:object_r:vendor_fingerprint_sysfs:s0
 genfscon sysfs /devices/platform/fingerprint/irq u:object_r:vendor_fingerprint_sysfs:s0
 
-# GPU
-genfscon sysfs /devices/platform/13000000.mali/devfreq/13000000.mali/min_freq u:object_r:vendor_sysfs_gpu:s0
-genfscon sysfs /devices/platform/13000000.mali/devfreq/13000000.mali/max_freq u:object_r:vendor_sysfs_gpu:s0
-
 # Power
 genfscon sysfs /devices/platform/11282000.i2c/i2c-12/12-0064/power_supply u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/11282000.i2c/i2c-12/12-0065/power_supply u:object_r:sysfs_power_supply:s0
