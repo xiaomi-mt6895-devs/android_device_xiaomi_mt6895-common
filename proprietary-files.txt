@@ -26,7 +26,6 @@ vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libbwc.so
 vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libfvaudio.so
-vendor/lib64/libladder.so
 vendor/lib64/libmiresample.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libmsbc_mtk.so
@@ -217,7 +216,6 @@ vendor/lib64/mt6895/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_drive
 vendor/lib64/mt6895/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
 vendor/lib64/mt6895/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/mt6895/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
-vendor/lib64/mt6895/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
 vendor/lib64/mt6895/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
@@ -492,7 +490,6 @@ vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 # Sensors
 vendor/firmware/remoteproc_scp
 vendor/lib64/libhfmanager.so
-vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 
 # Tether Offload
