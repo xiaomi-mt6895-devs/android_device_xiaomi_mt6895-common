@@ -23,21 +23,21 @@ vendor/lib64/libmfido_isee.so
 # Mlipay
 vendor/bin/mlipayd_isee@1.1
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-iseeservice.rc
-vendor/lib64/libmlipay_isee@1.1.so
 vendor/lib64/libmlipay_isee.so
+vendor/lib64/libmlipay_isee@1.1.so
 
 # Mtdservice
 vendor/bin/mtd_isee@1.3
 vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-iseeservice.rc
-vendor/lib64/libmt_isee@1.3.so
 vendor/lib64/libmt_isee.so
+vendor/lib64/libmt_isee@1.3.so
 
 # Secure Element
 vendor/bin/hw/vendor.microtrust.hardware.se@1.0-service
 vendor/etc/init/vendor.microtrust.hardware.se@1.0-service.rc
-vendor/lib64/se_nq_extn_client-v1.so
-vendor/lib64/ls_nq_client-v1.so
 vendor/lib64/jcos_nq_client-v1.so
+vendor/lib64/ls_nq_client-v1.so
+vendor/lib64/se_nq_extn_client-v1.so
 vendor/lib64/secure_element-impl.so
 
 # Soter

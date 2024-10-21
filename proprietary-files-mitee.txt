@@ -31,20 +31,20 @@ vendor/lib64/libmt_mitee@1.3.so
 # Secure Element
 vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service
 vendor/etc/init/vendor.xiaomi.hardware.secure_element@1.2-service.rc
-vendor/lib64/libmigpese@1.0.so
-vendor/lib64/se_nq_extn_client-v1.so
-vendor/lib64/ls_nq_client-v1.so
 vendor/lib64/jcos_nq_client-v1.so
+vendor/lib64/libmigpese@1.0.so
+vendor/lib64/ls_nq_client-v1.so
+vendor/lib64/se_nq_extn_client-v1.so
 
 # Trusted Execution Environment (TEE)
 vendor/bin/miteelog
 vendor/bin/tee-supplicant
 vendor/etc/init/miteelog.rc
 vendor/etc/init/tee-supplicant.rc
+vendor/lib64/libTEECommon.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
 vendor/lib64/libteecli.so
-vendor/lib64/libTEECommon.so
 vendor/lib64/libthha.so
 vendor/mitee/ta/14b0aad8-c011-4a3f-b66aca8d0e66f273.ta
 vendor/mitee/ta/2e8fade5-0c7a-46cc-810e6468baee66b9.ta
