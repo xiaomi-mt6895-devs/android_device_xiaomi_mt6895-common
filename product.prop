@@ -15,6 +15,9 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 
+# F2FS
+persist.fsck.disable_linear_lookup=on
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
