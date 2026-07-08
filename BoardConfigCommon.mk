@@ -61,6 +61,9 @@ BOARD_KERNEL_CMDLINE += cgroup_disable=memory
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# DTBO
+BOARD_KERNEL_SEPARATED_DTBO := true
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 ifeq ($(TARGET_HAS_UDFPS),true)
@@ -82,7 +85,8 @@ TARGET_KERNEL_CONFIG := \
 	vendor/$(PRODUCT_DEVICE).config
 
 TARGET_KERNEL_DTB := \
-    vendor/mediatek/mt6895.dtb
+    vendor/mediatek/mt6895.dtb \
+    vendor/mediatek/$(PRODUCT_DEVICE).dtbo
 
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
