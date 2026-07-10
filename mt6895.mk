@@ -199,6 +199,7 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    chipinfo \
     fstab.mt6895 \
     fstab.mt6895.vendor_ramdisk \
     fstab.zram \
