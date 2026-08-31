@@ -847,7 +847,7 @@ on property:ro.boot.slot_suffix=_b
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
+service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service.mediatek
     override
     class hal
     user audioserver
