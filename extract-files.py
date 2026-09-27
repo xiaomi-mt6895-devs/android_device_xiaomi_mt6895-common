@@ -62,6 +62,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so'),
     'vendor/lib64/hw/sensors.mediatek.V2.0.so': blob_fixup()
        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'vendor/bin/mnld' : blob_fixup()
+        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
     'vendor/lib64/libcodec2_hidl@1.0-v31.so': blob_fixup()
         .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v35.so')
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin-v31.so')
@@ -136,7 +138,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
-    'vendor/lib64/mt6895/libmnl.so': blob_fixup()
+    'vendor/lib64/mt6895/libmnl_mtk.so': blob_fixup()
         .add_needed('libcutils.so'),
     ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
