@@ -178,15 +178,14 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayMT6895 \
     FrameworksResOverlayMT6895 \
     PowerOffAlarmOverlayMT6895 \
-    TelephonyOverlayMT6895 \
     Launcher3QuickStepOverlayMT6895 \
     SettingsOverlayMT6895 \
-    SystemUIOverlayMT6895 \
-    WifiResOverlayMT6895
+    SystemUIOverlayMT6895
 
 PRODUCT_PACKAGES += \
     LineageApertureOverlayMT6895 \
@@ -264,6 +263,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore_V3.xml
 
+# Platform
+TARGET_BOARD_PLATFORM := mt6895
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
@@ -282,6 +284,9 @@ PRODUCT_PACKAGES += \
 
 # Properties
 include hardware/mediatek/configs/properties/vendor_logtag.mk
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Modules
 PRODUCT_PACKAGES += \
