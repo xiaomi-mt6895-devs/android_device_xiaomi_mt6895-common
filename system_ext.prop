@@ -1,0 +1,2 @@
+# Bluetooth
+persist.bluetooth.a2dp_offload.coex_buf_count=5
