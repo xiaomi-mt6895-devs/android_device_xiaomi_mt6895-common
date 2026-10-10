@@ -71,14 +71,14 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v35.so')
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin-v31.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
-        .replace_needed('libui.so', 'libui-v34.so')
+        .replace_needed('libui.so', 'libui-v32.so')
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libcodec2_hidl@1.1-v31.so': blob_fixup()
         .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v35.so')
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0-v31.so')
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin-v31.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
-        .replace_needed('libui.so', 'libui-v34.so')
+        .replace_needed('libui.so', 'libui-v32.so')
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libcodec2_hidl@1.2-v31.so': blob_fixup()
         .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v35.so')
@@ -86,7 +86,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcodec2_hidl@1.1.so', 'libcodec2_hidl@1.1-v31.so')
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin-v31.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
-        .replace_needed('libui.so', 'libui-v34.so')
+        .replace_needed('libui.so', 'libui-v32.so')
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libcodec2_hidl_plugin-v31.so': blob_fixup()
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so'),
@@ -99,20 +99,20 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0-v31.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
-        .replace_needed('libui.so', 'libui-v34.so'),
+        .replace_needed('libui.so', 'libui-v32.so'),
     ('vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so', 'vendor/lib64/libcodec2_vpp_dolby_plugin.so'): blob_fixup()
         .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common-v31.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
         .replace_needed('libformatter.so', 'libformatter_mtk.so')
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
         .replace_needed('libsfplugin_ccodec_utils.so', 'libsfplugin_ccodec_utils-v31.so')
-        .replace_needed('libui.so', 'libui-v34.so'),
+        .replace_needed('libui.so', 'libui-v32.so'),
     'vendor/lib64/libcodec2_soft_common-v31.so': blob_fixup()
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
         .replace_needed('libsfplugin_ccodec_utils.so', 'libsfplugin_ccodec_utils-v31.so'),
     'vendor/lib64/libcodec2_vndk-v31.so': blob_fixup()
-        .replace_needed('libui.so', 'libui-v34.so')
+        .replace_needed('libui.so', 'libui-v32.so')
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'vendor/lib64/libsfplugin_ccodec_utils-v31.so': blob_fixup()
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
