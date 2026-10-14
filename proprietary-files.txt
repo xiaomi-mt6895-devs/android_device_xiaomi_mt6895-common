@@ -288,6 +288,9 @@ vendor/lib64/mt6895/libmnl.so:vendor/lib64/mt6895/libmnl_mtk.so;SYMLINK=vendor/l
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 
+# GNSS (LPPe) - from Pacman C5.0-261112-1938
+system_ext/priv-app/LPPeService/LPPeService.apk|24397724a95455697505ca2b7c62fd36b77b1213
+
 # HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk
 product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk

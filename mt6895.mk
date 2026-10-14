@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+# GNSS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.location.lppe.main.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.location.lppe.main.xml
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \

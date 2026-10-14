@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.mediatek.location.lppe.main">
+        <permission name="android.permission.ACCESS_FINE_LOCATION" />
+        <permission name="android.permission.BLUETOOTH_CONNECT" />
+        <permission name="android.permission.BLUETOOTH_SCAN" />
+        <permission name="android.permission.INTERNET" />
+        <permission name="android.permission.LOCATION_BYPASS" />
+        <permission name="android.permission.LOCATION_HARDWARE" />
+        <permission name="android.permission.MODIFY_PHONE_STATE" />
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+    </privapp-permissions>
+</permissions>
