@@ -249,6 +249,7 @@ vendor/lib64/hw/gatekeeper.beanpod.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
+vendor/bin/lbs_hidl_service
 vendor/bin/mnld
 vendor/bin/mtk_agpsd
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
@@ -272,13 +273,16 @@ vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.gps_pwr.rc
 vendor/etc/init/init.gps_scp.rc
+vendor/etc/init/lbs_hidl_service.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
+vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/etc/slp_conf
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
+vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/mt6895/libDR.so;SYMLINK=vendor/lib64/libDR.so
 vendor/lib64/mt6895/libmnl.so:vendor/lib64/mt6895/libmnl_mtk.so;SYMLINK=vendor/lib64/libmnl_mtk.so;FIX_SONAME
 vendor/lib64/librpc.so
